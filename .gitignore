@@ -1,0 +1,8 @@
+**pycache**/
+*.pyc
+.pytest_cache/
+.venv/
+venv/
+.DS_Store
+exports/
+checkpoints/
