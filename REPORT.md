@@ -51,6 +51,10 @@ This is an untrained PyTorch architecture skeleton. It validates tensor contract
 
 `vetc.runtime` wires all implemented modules into `VETCSystem` and provides a dummy `RuntimeLoop`.
 
+## Repository Structure Note
+
+The original PDF roadmap describes a larger future VET-C repository containing dataset, trainer, losses, simulator, deploy, memory, and rollout systems. This repository currently implements the Section 2 MVP scope, RFC-1000 to RFC-1015. Therefore, only the modules required for the runnable v0.1 pipeline are implemented. Future folders are included as placeholders and will be filled when Section 3+ systems are implemented.
+
 ## End-to-End Pipeline
 
 ```text
@@ -154,4 +158,3 @@ avg_step_time_ms: approximately 4.1 ms
 ## Recommended Next Steps
 
 Future work should add training data interfaces, supervised/self-supervised training loops, checkpoint support, deterministic evaluation harnesses, hardware input adapters, actuator output adapters, safety constraints, profiling on Jetson Orin Nano, and deployment packaging.
-

@@ -48,7 +48,16 @@ tests/           Unit and integration tests
 scripts/         Dummy inference and runtime loop entry points
 configs/         Default configuration
 docs/            RFC documentation folders
+dataset/         Future data loading and dataset interfaces placeholder
+trainer/         Future training loop and experiment orchestration placeholder
+losses/          Future loss modules placeholder
+simulator/       Future simulation adapters placeholder
+deploy/          Future deployment assets, Docker files, and deploy docs placeholder
 ```
+
+## Repository Structure Note
+
+The original PDF roadmap describes a larger future VET-C repository containing dataset, trainer, losses, simulator, deploy, memory, and rollout systems. This repository currently implements the Section 2 MVP scope, RFC-1000 to RFC-1015. Therefore, only the modules required for the runnable v0.1 pipeline are implemented. Future folders are included as placeholders and will be filled when Section 3+ systems are implemented.
 
 ## Install
 
@@ -139,4 +148,3 @@ avg_step_time_ms: approximately 4.1 ms
 - It is not a trained or deployable drone controller.
 - No real sensor ingestion, flight controller integration, safety envelope, calibration, or Jetson-specific optimization is included yet.
 - Memory, dreaming, density flow, MCTS, H+ Grasp, training loops, datasets, and deployment runtime are future work.
-
