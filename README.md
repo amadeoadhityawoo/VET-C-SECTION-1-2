@@ -2,13 +2,15 @@
 
 VET-C is an edge AI drone control model architecture targeting NVIDIA Jetson Orin Nano-class deployment. The current repository contains a PyTorch MVP that proves the end-to-end tensor contracts for perception, latent dynamics, regime inference, terrain-field generation, policy output, and a dummy runtime loop.
 
-This is not a trained drone controller. It is an untrained architecture skeleton using dummy inputs, intended to validate module boundaries and runtime wiring before training, deployment integration, and flight-safety work.
+This repository is a runnable PyTorch MVP architecture skeleton. It validates tensor contracts and end-to-end module connectivity using dummy inputs, but it is not yet a trained or deployable drone controller.
 
 ## Sections
 
-Section 1 is the repository and core-contract foundation. It defines the package skeleton, tensor dimensions, dataclasses, validation helpers, custom errors, and abstract interfaces used by the rest of the project.
+Section 1 in the PDF refers to the Theory RFC series, RFC-0000 through RFC-0016. It defines the system architecture, tensor interface contract, repository architecture, training pipeline specification, runtime inference specification, loss function specification, regime engine and codebook, VET terrain and five-element tensor field, memory, dreaming, density flow, higher-level theory, and MVP roadmap.
 
-Section 2 is the MVP model pipeline. It implements the first end-to-end VET-C runtime path from raw dummy sensor tensors to normalized drone action commands.
+Section 2 in the PDF refers to the Implementation RFC series, RFC-1000 through RFC-1015. It defines the actual Codex implementation sprints: repository initialization, core types, constants and tensor checks, interfaces, observation layer, external/internal encoders, dual perception encoder, fusion, RSSM, prediction error, regime VQ-VAE, terrain generator, fast policy, and runtime system.
+
+This repository currently implements the Section 2 MVP scope, RFC-1000 to RFC-1015. It does not yet fully implement all Section 1 theory documents as markdown files. It does not yet implement Section 3+ training, dataset, simulation, memory, dream, or deployment systems.
 
 ## Implemented RFCs
 
@@ -58,6 +60,8 @@ deploy/          Future deployment assets, Docker files, and deploy docs placeho
 ## Repository Structure Note
 
 The original PDF roadmap describes a larger future VET-C repository containing dataset, trainer, losses, simulator, deploy, memory, and rollout systems. This repository currently implements the Section 2 MVP scope, RFC-1000 to RFC-1015. Therefore, only the modules required for the runnable v0.1 pipeline are implemented. Future folders are included as placeholders and will be filled when Section 3+ systems are implemented.
+
+RFC placeholder documents have been added under `docs/rfc/theory` and `docs/rfc/implementation` to align the repository with the PDF roadmap.
 
 ## Install
 
