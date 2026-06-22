@@ -1,0 +1,32 @@
+project:
+  name: VET-C
+  version: 0.1.0
+  implemented_rfc_scope:
+    - RFC-1000
+    - RFC-1001
+    - RFC-1002
+    - RFC-1003
+
+tensors:
+  image_height: 64
+  image_width: 64
+  sensor_history_steps: 32
+  ext_obs_channels: 6
+  int_obs_dim: 11
+  z_ext_channels: 128
+  z_ext_height: 16
+  z_ext_width: 16
+  z_int_dim: 128
+  fused_dim: 256
+  rssm_hidden_dim: 512
+  rssm_latent_dim: 64
+  regime_token_dim: 96
+  psi_field_dim: 5
+  memory_token_dim: 128
+  trajectory_feature_dim: 64
+  action_dim: 4
+
+runtime:
+  target_device: jetson_orin_nano
+  dtype: float32
+
