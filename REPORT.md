@@ -156,6 +156,30 @@ nan_detected: False
 avg_step_time_ms: approximately 4.1 ms
 ```
 
+## RFC-1015 10,000-Cycle Validation
+
+Command used:
+
+```bash
+python3 scripts/run_runtime_loop.py --cycles 10000
+```
+
+Result:
+
+```text
+cycles: 10000
+final_action_shape: (2, 4)
+nan_detected: False
+avg_step_time_ms: 4.3522
+```
+
+Pytest result from the same validation pass:
+
+```text
+python3 -m pytest -q
+48 passed
+```
+
 ## Current Limitations
 
 - The model is untrained and randomly initialized.
